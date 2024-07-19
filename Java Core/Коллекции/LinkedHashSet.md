@@ -1,0 +1,1 @@
+**[LinkedHashSet](http://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)** — отличается от `HashSet` только тем, что в основе лежит `LinkedHashMap` вместо `HashMap`. Благодаря этому отличию порядок элементов при обходе коллекции является идентичным порядку добавления элементов.

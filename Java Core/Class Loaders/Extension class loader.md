@@ -1,0 +1,3 @@
+In Java 9 and later versions, the extension class loader was removed from the JVM. It was used in earlier versions of Java to load classes from the extension directory, which was typically located in the `JRE/lib/ext` directory.
+
+Instead of the extension class loader, Java 9 and later versions use the `java.lang.ModuleLayer` class to load modules from the extension directory. The extension directory is now treated as a separate layer in the module system, and modules in the extension directory are loaded by the extension layer's class loader.

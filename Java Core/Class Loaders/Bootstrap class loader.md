@@ -1,0 +1,7 @@
+Also known as the _primordial class loader_, this is the class loader where the search starts. The bootstrap class loader is responsible for loading core Java classes such as `java.lang.Object` and `java.lang.String`. It is implemented in native code and classes are located in the `$JAVA_HOME/lib` directory.
+
+There were some important changes to class loaders between Java 8 and Java 9. For example, in Java 8, the bootstrap class loader was located in the Java Runtime Environment's `rt.jar` file. In Java 9 and subsequently, the `rt.jar` file was removed.
+
+Moreover, Java 9 introduced the [Java module system](https://www.infoworld.com/article/3543253/what-is-jpms-introducing-the-java-platform-module-system.html), which changed _how_ classes are loaded. In the module system, each module defines its own class loader, and the bootstrap class loader is responsible for loading the module system itself and the initial set of modules. When the JVM starts up, the bootstrap class loader loads the `java.base` module, which contains the core Java classes and any other modules that are required to launch the JVM.
+
+The `java.base` module also exports packages to other modules, such as `java.lang`, which contains core classes like `Object` and `String`. These packages are then loaded by the bootstrap class loader.
